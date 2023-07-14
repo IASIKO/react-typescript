@@ -16,10 +16,19 @@ function App() {
     });
   };
 
+  const deleteTodoHandler = () => {
+    const idText = new Todo(new Date().toISOString());
+
+    const findIndex = todos.findIndex((id) => idText === id);
+    const newList = [...todos]
+
+  };
+  
+
   return (
     <div>
       <NewTodo addTodo={addTodoHandler} />
-      <Todos items={todos} />
+      <Todos items={todos} onDelete={deleteTodoHandler}/>
     </div>
   );
 }
