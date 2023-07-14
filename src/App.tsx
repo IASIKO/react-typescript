@@ -4,7 +4,6 @@ import Todos from "./components/Todos";
 import Todo from "./model/todo";
 
 function App() {
-  // const todos = [new Todo("Learn React"), new Todo("Learn Typescript")];
 
   const [todos, setTodos] = useState<Todo[]>([]);
 
@@ -16,11 +15,10 @@ function App() {
     });
   };
 
-  const deleteTodoHandler = () => {
-    const idText = new Todo(new Date().toISOString());
-
-    const findIndex = todos.findIndex((id) => idText === id);
-    const newList = [...todos]
+  const deleteTodoHandler = (todoId: string) => {
+    setTodos((prevTodos) => {
+      return prevTodos.filter(todo => todo.id !== todoId)
+    });
 
   };
   
