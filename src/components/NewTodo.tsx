@@ -1,8 +1,12 @@
 import React from "react";
 
 const NewTodo = () => {
+  const submitHandler = (event: React.FormEvent) => {
+    event.preventDefault();
+  };
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <label htmlFor="text">New Todo</label>
       <input type="text" id="text" />
       <button>Add Todo</button>
