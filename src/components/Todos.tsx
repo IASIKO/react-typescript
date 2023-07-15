@@ -4,9 +4,7 @@ import TodoItem from "./TodoItem";
 import classes from "./Todos.module.css";
 import { TodosContext } from "../store/todos-context";
 
-const Todos: React.FC<{ items: Todo[]; onDelete: (id: string) => void }> = (
-  props
-) => {
+const Todos: React.FC = () => {
   const todosCtx = useContext(TodosContext);
 
   return (
