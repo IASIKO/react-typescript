@@ -8,8 +8,8 @@ function App() {
 
   return (
     <div>
-      <NewTodo addTodo={addTodoHandler} />
-      <Todos items={todos} onDelete={deleteTodoHandler}/>
+      <NewTodo/>
+      <Todos/>
     </div>
   );
 }
