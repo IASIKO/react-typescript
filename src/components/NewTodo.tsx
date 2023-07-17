@@ -4,7 +4,7 @@ import { TodosContext } from "../store/todos-context";
 
 const NewTodo: React.FC = () => {
   const todosCtx = useContext(TodosContext);
-  
+
   const todoTextInputRef = useRef<HTMLInputElement>(null);
 
   const submitHandler = (event: React.FormEvent) => {
